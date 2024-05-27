@@ -1,0 +1,28 @@
+{
+  "name": "orm_with_ts",
+  "version": "1.0.0",
+  "description": "# Description",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon dist/index.js",
+    "build": "tsc",
+    "dev": "nodemon index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mujpara-Nitin-Trainee/ORM_WITH_TS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mujpara-Nitin-Trainee/ORM_WITH_TS/issues"
+  },
+  "homepage": "https://github.com/Mujpara-Nitin-Trainee/ORM_WITH_TS#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
+}
