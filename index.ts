@@ -1,18 +1,11 @@
-import express,{Application, Request,Response} from "express";
-import { config } from "dotenv";
-import { initializeConnection } from "./config/config";
+import express, { Application } from "express";
+import router from "./routes/router";
+import { PORT } from "./configs";
 
-config();
+const app : Application = express();
+const Port: string | number = PORT || 4000;
 
-const app:Application = express();
-const Port:string = process.env.PORT || "3000";
+app.use(express.json());
+app.use(router);
 
-
-initializeConnection();
-
-app.get('/',(req:Request,res:Response) => {
-  res.send("Hello World");
-})
-
-
-app.listen(Port, ()=> { console.log(`Server Running on :- http://localhost:${Port}/`)})
+app.listen(Port, ()=> {console.log(`Server is running on :- http://localhost:${Port}/`)})
